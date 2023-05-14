@@ -6,7 +6,7 @@ function renderData(data) {
     .map(
       (item) => `
       <div class="item">
-        <img src=${item.icon}/>
+        <img src="${item.icon}"/>
         <h4>${item.category}</h4>
         <p>${item.score} / 100</p>
       </div>

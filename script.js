@@ -1,14 +1,10 @@
 import data from "./data.json";
 import "./style.css";
 
-function renderData(data) {
+function renderData(result) {
   const container = document.getElementById("summary-details");
 
-  data.forEach((item) => {
-    if (item.category === "Reaction") {
-      //   style.backgroundColor = red;
-    }
-
+  result.forEach((item) => {
     const div = document.createElement("div");
     div.classList.add("indicators");
 
@@ -17,19 +13,45 @@ function renderData(data) {
     div.appendChild(img);
 
     const h4 = document.createElement("h4");
-    h4.setAttribute("style", "red")
     const h4Text = document.createTextNode(item.category);
-    //   h4Text.setAttribute("style", "red");
     h4.appendChild(h4Text);
     div.appendChild(h4);
 
     const p = document.createElement("p");
-    const pText = document.createTextNode(`${item.score} / 100`);
-    p.appendChild(pText);
+    p.innerHTML = `<span>${item.score}</span> / 100`;
     div.appendChild(p);
 
-    container.appendChild(div);
+    item == result[0] && (div.setAttribute("style", "background-color:hsl(0, 100%, 96%)"),
+      (h4.style.color = "var(--Light-red)"));
+    
+    item == result[1] && (div.setAttribute("style", "background-color:hsl(39, 100%, 96%)"),
+      (h4.style.color = "hsl(39, 100%, 56%)"));
+    
+    item == result[2] && (div.setAttribute("style", "background-color:hsl(166, 100%, 96%)"),
+      (h4.style.color = "hsl(166, 100%, 37%)"));
+    
+    item == result[3] && (div.setAttribute("style", "background-color:hsl(234, 85%, 96%);"),
+      (h4.style.color = "hsl(234, 85%, 45%)"));
+    
+    
+      container.appendChild(div);
   });
 }
-
 renderData(data);
+
+// const div = document.createElement('div');
+// div.style.backgroundColor = "blue";
+
+// const image = document.createElement('img');
+// image.setAttribute("src", result[0].icon)
+// div.appendChild(image);
+
+// const h4 = document.createElement("h4");
+//   h4.setAttribute("style", "red")
+//   const h4Text = document.createTextNode(result[0].category);
+//   h4.appendChild(h4Text);
+//   div.appendChild(h4);
+
+// container.appendChild(div);
+
+// console.log(data[0]);

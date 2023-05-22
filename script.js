@@ -39,19 +39,3 @@ function renderData(result) {
 }
 renderData(data);
 
-// const div = document.createElement('div');
-// div.style.backgroundColor = "blue";
-
-// const image = document.createElement('img');
-// image.setAttribute("src", result[0].icon)
-// div.appendChild(image);
-
-// const h4 = document.createElement("h4");
-//   h4.setAttribute("style", "red")
-//   const h4Text = document.createTextNode(result[0].category);
-//   h4.appendChild(h4Text);
-//   div.appendChild(h4);
-
-// container.appendChild(div);
-
-// console.log(data[0]);

@@ -29,17 +29,17 @@ function renderData() {
         p.innerHTML = `<span>${item.score}</span> / 100`;
         div.appendChild(p);
 
-        // item == result[0] && (div.setAttribute("style", "background-color:hsl(0, 100%, 96%)"),
-        //   (h4.style.color = "var(--Light-red)"));
+        item == data[0] && (div.setAttribute("style", "background-color:hsl(0, 100%, 96%)"),
+          (h4.style.color = "var(--Light-red)"));
     
-        // item == result[1] && (div.setAttribute("style", "background-color:hsl(39, 100%, 96%)"),
-        //   (h4.style.color = "hsl(39, 100%, 56%)"));
+        item == data[1] && (div.setAttribute("style", "background-color:hsl(39, 100%, 96%)"),
+          (h4.style.color = "hsl(39, 100%, 56%)"));
     
-        // item == result[2] && (div.setAttribute("style", "background-color:hsl(166, 100%, 96%)"),
-        //   (h4.style.color = "hsl(166, 100%, 37%)"));
+        item == data[2] && (div.setAttribute("style", "background-color:hsl(166, 100%, 96%)"),
+          (h4.style.color = "hsl(166, 100%, 37%)"));
     
-        // item == result[3] && (div.setAttribute("style", "background-color:hsl(234, 85%, 96%);"),
-        //   (h4.style.color = "hsl(234, 85%, 45%)"));
+        item == data[3] && (div.setAttribute("style", "background-color:hsl(234, 85%, 96%);"),
+          (h4.style.color = "hsl(234, 85%, 45%)"));
     
     
         container.appendChild(div);

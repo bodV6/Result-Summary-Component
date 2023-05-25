@@ -19,9 +19,9 @@ Order Summary Component is a Solution to a beginner project on FrontEnd MEntor u
 
 ### Screenshot
 
-![](./screenshots/screenshot-1684764045145.jpeg)
-![](./screenshots/screenshot-1684764046269.jpeg)
-![](./screenshots/screenshot-1684764050085.jpeg)
+![](./screenshots/screenshot-1685006706943.jpeg)
+![](./screenshots/screenshot-1685006709279.jpeg)
+![](./screenshots/screenshot-1685006712669.jpeg)
 
 ### Links
 

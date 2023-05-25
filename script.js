@@ -13,6 +13,7 @@ function renderData() {
 
         const img = document.createElement("img");
         img.setAttribute("src", item.icon);
+        img.setAttribute('alt', `${item.category}`)
         div.appendChild(img);
 
         const h4 = document.createElement("h4");

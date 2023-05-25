@@ -11,7 +11,7 @@
   /* Gradients */
   /* background */
   --Light-slate-blue: rgb(121, 87, 255);
-  --Light-royal-blue: hsl(241, 81%, 54%);
+  --Light-royal-blue: #2e2be9;
 
   /* circle */
   --Violet-blue: rgb(78, 33, 202);
@@ -70,22 +70,26 @@ img {
 main {
   display: flex;
   flex-direction: column;
- 
 }
 
 .result {
   padding: 1rem;
-  background-color: var(--Light-royal-blue);
+  background: rgb(46, 43, 233);
+  background: linear-gradient(
+    0deg,
+    rgba(46, 43, 233, 1) 40%,
+    rgba(46, 43, 233, 0.8) 100%
+  );
   color: var(--Light-lavender);
   text-align: center;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
 }
 
-.result h3,
+.result h1,
 .summary h3 {
   margin-top: 1rem;
-  font-size: calc(var(--font-size) * 1.1);
+  font-size: calc(var(--font-size) * 1.3);
 }
 
 .circle {
@@ -97,27 +101,26 @@ main {
   );
   border-radius: 50%;
   border: none;
-  width: 9rem;
-  height: 9rem;
-  margin: 2rem auto;
+  width: 10rem;
+  height: 10rem;
+  margin: 1rem auto;
   padding: 2rem 0;
-  
 }
 
 .circle span {
   color: var(--White);
   display: block;
-  font-size: calc(var(--font-size) * 3);
+  font-size: calc(var(--font-size) * 3.5);
   font-weight: 700;
 }
 
 .result h2 {
   color: var(--White);
-  font-size: calc(var(--font-size) * 1.3);
+  font-size: calc(var(--font-size) * 1.4);
   margin-bottom: 1rem;
 }
 
-.result-text{
+.result-text {
   margin-bottom: 1rem;
   padding: 0 1rem;
 }
@@ -125,9 +128,7 @@ main {
 .summary {
   padding: 1rem;
   background-color: var(--White);
-  
 }
-
 
 .indicators {
   display: flex;
@@ -135,17 +136,17 @@ main {
   gap: 1rem;
   border-radius: 10px;
   padding: 1rem;
-  color: var(--Light-lavender);
+  color: hsla(224, 30%, 27%, 0.7);
   margin-top: 1rem;
-
 }
 
-.indicators h4{
+.indicators h4 {
   margin-right: auto;
 }
 
 .indicators span {
-  color: black;
+  color: hsla(224, 30%, 27%, 1);
+  font-weight: 700;
 }
 
 button {
@@ -163,36 +164,56 @@ button:hover {
   background-color: var(--Cobalt-blue);
 }
 
-
-
 @media (min-width: 50em) {
   body {
-    max-width: 60vw;
-    max-height: 60vh;
+    max-width: 50vw;
+    max-height: 70vh;
     margin: 1px auto;
   }
-  main{
+  main {
     flex-direction: row;
-   
-
   }
-  .result{ 
+  .result {
     flex-basis: 50%;
     border-radius: 30px;
     -moz-box-shadow: -15px 25px 30px 0 var(--Pale-blue);
     -webkit-box-shadow: -15px 25px 30px -0 var(--Pale-blue);
     box-shadow: -15px 25px 30px 0 var(--Pale-blue);
+    /* padding: 2rem; */
   }
-.result-text {
-  padding: 0 calc(var(--font-size) * 4);
-}
 
-.summary {
-  flex-basis: 50%;
-  border-top-right-radius: 30px;
-  border-bottom-right-radius: 30px;
-  -moz-box-shadow: 15px 25px 30px 0 var(--Pale-blue);
-  -webkit-box-shadow: 15px 25px 30px 0 var(--Pale-blue);
-  box-shadow: 15px 25px 30px 0 var(--Pale-blue);
+  .result h1 {
+    font-size: calc(var(--font-size) * 1.5);
+    margin-bottom: 2rem;
+  }
+  .result h2 {
+    font-size: calc(var(--font-size) * 1.5);
+    margin-top: 2rem;
+  }
+  .result-text {
+    padding: 0 calc(var(--font-size) * 2);
+  }
+
+  .circle {
+    width: 12rem;
+    height: 12rem;
+  }
+
+  .summary {
+    padding: 2rem;
+    flex-basis: 50%;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    -moz-box-shadow: 15px 25px 30px 0 var(--Pale-blue);
+    -webkit-box-shadow: 15px 25px 30px 0 var(--Pale-blue);
+    box-shadow: 15px 25px 30px 0 var(--Pale-blue);
+  }
+
+  .summary h3{
+    margin-bottom: 1.5rem;
+  }
+  
+  button {
+    margin-top: 2rem;
   }
 }
